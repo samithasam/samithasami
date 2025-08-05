@@ -1,0 +1,34 @@
+//syntax
+//do
+//{
+ // loop block
+//} while (boolean_expression);
+import java.util.Scanner;
+
+public class OddEvenChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        // do-while loop ensures the code runs at least once
+        do {
+            System.out.print("Enter an integer (0 to exit): ");
+            number = scanner.nextInt();
+
+            if (number == 0) {
+                System.out.println("Exiting...");
+                break;
+            }
+
+            if (number % 2 == 0) {
+                System.out.println(number + " is even.");
+            } else {
+                System.out.println(number + " is odd.");
+            }
+
+        } while (true);
+
+        scanner.close();
+    }
+}
+
