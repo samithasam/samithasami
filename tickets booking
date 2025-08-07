@@ -1,0 +1,138 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Class for seat data
+class Seat {
+    int seatNumber;
+    String seatName;
+    String customerName;
+
+    Seat(int seatNumber, String seatName, String customerName) {
+        this.seatNumber = seatNumber;
+        this.seatName = seatName;
+        this.customerName = customerName;
+    }
+
+    @Override
+    public String toString() {
+        return "Seat Number: " + seatNumber + ", Seat Name: " + seatName + ", Customer: " + customerName;
+    }
+}
+
+public class Main {
+
+    static ArrayList<Seat> bookedSeats = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int choice;
+        do {
+            System.out.println("\n=== Ticket Booking System ===");
+            System.out.println("1. Book a Seat");
+            System.out.println("2. Cancel a Booking");
+            System.out.println("3. Update Booking");
+            System.out.println("4. View All Bookings");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice (1-5): ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    bookSeat();
+                    break;
+                case 2:
+                    cancelSeat();
+                    break;
+                case 3:
+                    updateBooking();
+                    break;
+                case 4:
+                    viewBookings();
+                    break;
+                case 5:
+                    System.out.println("Exiting... Thank you!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 5);
+    }
+
+    public static void bookSeat() {
+        System.out.print("Enter seat number to book: ");
+        int seatNumber = scanner.nextInt();
+        scanner.nextLine(); 
+
+        
+        for (Seat seat : bookedSeats) {
+            if (seat.seatNumber == seatNumber) {
+                System.out.println("Seat already booked!");
+                return;
+            }
+        }
+
+        System.out.print("Enter seat name (e.g., A1, B2): ");
+        String seatName = scanner.nextLine();
+
+        System.out.print("Enter customer name: ");
+        String name = scanner.nextLine();
+
+        bookedSeats.add(new Seat(seatNumber, seatName, name));
+        System.out.println("Seat booked successfully.");
+    }
+
+    public static void cancelSeat() {
+        System.out.print("Enter seat number to cancel: ");
+        int seatNumber = scanner.nextInt();
+        boolean found = false;
+
+
+        for (int i = 0; i < bookedSeats.size(); i++) {
+            if (bookedSeats.get(i).seatNumber == seatNumber) {
+                bookedSeats.remove(i);
+                System.out.println("Booking cancelled successfully.");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Seat not found.");
+        }
+    }
+
+
+    public static void updateBooking() {
+        System.out.print("Enter seat number to update: ");
+        int seatNumber = scanner.nextInt();
+        scanner.nextLine(); 
+        boolean found = false;
+
+        for (Seat seat : bookedSeats) {
+            if (seat.seatNumber == seatNumber) {
+                System.out.print("Enter new customer name: ");
+                String newName = scanner.nextLine();
+                seat.customerName = newName;
+                System.out.println("Booking updated successfully.");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Seat not found.");
+        }
+    }
+
+    public static void viewBookings() {
+        if (bookedSeats.isEmpty()) {
+            System.out.println("No bookings yet.");
+        } else {
+            System.out.println("\nCurrent Bookings:");
+            for (Seat seat : bookedSeats) {
+                System.out.println(seat);
+            }
+        }
+    }
+}
