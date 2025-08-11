@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[][][] arr = {{{1, 2, 3}, {4, 5, 6}},{{0, 9, 8}, {7, 6, 5}}};
+
+        for (int[][] x : arr) {
+            for (int[] y : x) {
+                for (int z : y) {
+                    System.out.print(z +" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
