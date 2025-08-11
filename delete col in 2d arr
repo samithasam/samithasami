@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int row = scanner.nextInt();
+        System.out.print("Enter number of columns: ");
+        int col = scanner.nextInt();
+        int[][] arr = new int[row][col];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print("Enter element [" + i + "][" + j + "]: ");
+                arr[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("The original array is:");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.print("Enter the column to delete (0-based index): ");
+        int colToDelete = scanner.nextInt();
+
+        int[][] newArr = deleteColumn(arr, colToDelete);
+
+        System.out.println("The array after deleting column " + colToDelete + " is:");
+        for (int i = 0; i < newArr.length; i++) {
+            for (int j = 0; j < newArr[0].length; j++) {
+                System.out.print(newArr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int[][] deleteColumn(int[][] arr, int colToDelete) {
+        int[][] newArr = new int[arr.length][arr[0].length - 1];
+
+        for (int i = 0; i < arr.length; i++) {
+            int newColIndex = 0;
+            for (int j = 0; j < arr[0].length; j++) {
+                if (j != colToDelete) {
+                    newArr[i][newColIndex] = arr[i][j];
+                    newColIndex++;
+                }
+            }
+        }
+
+        return newArr;
+    }
+}
