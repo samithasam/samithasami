@@ -1,3 +1,4 @@
+//char(),codepoint(),codebefore()
 import java.util.Scanner;
 
 public class Main {
@@ -12,4 +13,212 @@ public class Main {
         System.out.println("code before:" + codeBefore);
         x.close();
     }
+}
+//codepointcount()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        int name = x.next().codePointCount(0,5);
+        int name1 = x.next().compareTo(name2);
+        System.out.println(name);
+        System.out.println(name1.compareTo(name2));
+    }
+}
+//compareto()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        String name ="samitha";
+        String name1 ="samithasri";
+        System.out.println(name.compareTo(name1));
+        System.out.println();
+        
+    }
+}
+//compareToTgnoreCase()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String name ="samitha";
+        String name1 ="samithasri";
+        System.out.println(name.compareToIgnoreCase(name1));
+        System.out.println();
+        
+    }
+}
+//concat()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String name ="samitha";
+        String name1 =" sri";
+        System.out.println(name.concat(name1));
+        System.out.println();
+        
+    }
+}
+//contains(),contentEqual()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String name ="samitha";
+        System.out.println(name.contains("sami"));
+        System.out.println(name.contentEquals("samitha"));
+        System.out.println();
+        
+    }
+}
+//copyvalueof()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        char[] name1 = {'s','a','m','i'};
+        String name =" ";
+        name = name.copyValueOf(name1, 0, 3);
+        System.out.println("Returned String: " + name);
+        
+        
+    }
+}
+//copyvalue of()
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a value: ");
+        String value = scanner.nextLine();  
+        String copyOfValue = value;         
+        System.out.println("Copy of value: " + copyOfValue);
+        scanner.close();
+    }
+}
+//endsWith()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String name ="sami";
+        System.out.println(name.endsWith("i"));
+    }
+}
+//equals(),equalsIgnoreCase()
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String name = "sami";
+        String name1 ="sami";
+        System.out.println(name.equals(name1));
+        System.out.println(name.equalsIgnoreCase(name1));
+    }
+}
+//format()
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String name1 =" hello %s! I'm %,d ";
+        String result=String.format(name1,"sam",19);
+        System.out.println(result);
+    }
+}
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        String result = String.format("Hi %s, I'm Samitha.", name);
+        System.out.println(result);
+        scanner.close();
+    }
+}
+//getchar()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    char[] data ={'0','1','2','3','4','5','6','7','8','9'};
+    System.out.println(data);
+    String mystr = "samithasri";
+    mystr.getChars(3,6, data, 4);
+    System.out.println(data);
+    }
+}
+//getbytes()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		byte[] arr = name.getBytes();
+		System.out.println(arr[0]);
+	}
+}
+//indexOf()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		System.out.println(name.indexOf("sri"));
+	}
+}
+//touppercase()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		System.out.println(name.toUpperCase());
+	}
+}
+//hashcode()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		System.out.println(name.hashCode());
+	}
+}
+//isEmpty()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		String name1 = "";
+		System.out.println(name.isEmpty());
+		System.out.println(name1.isEmpty());
+
+	}
+}
+//join()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name =String.join(" ","samitha"," ","madhu"," ","suji");
+		System.out.println(name);
+		System.out.println();
+	}
+}
+//lastIndexof()
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "samithasri";
+		System.out.println(name.lastIndexOf("sami"));
+
+	}
 }
