@@ -222,3 +222,22 @@ public class Main {
 
 	}
 }
+//trim(),valueof()
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String result = "       diamond cuts diamond";
+                System.out.println(result.trim());
+                char[] myArray = {'a', 'b', 'c'};
+                System.out.println(String.valueOf(myArray));
+                System.out.println(String.valueOf('A'));
+                System.out.println(String.valueOf(true));
+                System.out.println(String.valueOf(4.5f));
+                System.out.println(String.valueOf(5.2));
+                System.out.println(String.valueOf(12));
+                System.out.println(String.valueOf(1400L));
+
+        }
+}
+
