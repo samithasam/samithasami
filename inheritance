@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+// parent class
+class Good {
+    void family() {
+        System.out.println("Family details");
+    }
+}
+
+// child classes
+class Arunachalam extends Good {
+    void family() {
+        System.out.println("arunachalam");
+    }
+}
+
+class Susiladevi extends Good {
+    void family() {
+        System.out.println("Susiladevi");
+    }
+}
+
+class Arunarani extends Good {
+    void family() {
+        System.out.println("Arunarani");
+    }
+}
+
+class Ashok extends Good {
+    void family() {
+        System.out.println("Ashok");
+    }
+}
+
+// main class
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        Good person;
+
+        System.out.println("Enter a name (Arunachalam,Susiladevi,Arunarani,Ashok):");
+        String input = data.nextLine().trim().toLowerCase();
+
+        if (input.equals("Arunachalam")) {
+            person = new Arunachalam();
+        } else if (input.equals("Susiladevi")) {
+            person = new Susiladevi();
+        } else if (input.equals("Arunarani")) {
+            person = new Arunarani();
+        } else if (input.equals("Ashok")) {
+            person = new Ashok();
+        } else {
+            System.out.println("Invalid input ");
+            person = new Good();
+        }
+
+        person.family();
+       
+    }
+}
