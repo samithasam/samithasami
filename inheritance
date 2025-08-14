@@ -58,3 +58,101 @@ public class Main {
        
     }
 }
+// multi inheritance
+class Vehical {
+    void vechical() {
+        System.out.println("this is a vechical");
+    }
+}
+class FourWheeler extends Vehical {
+    FourWheeler() {
+        System.out.println("this is a FourWheeler");
+    }
+}
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("this is a Car");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+    }
+}
+//heiarchal inheritance
+import java.util.Scanner;
+
+class Name {
+    Name() {
+        System.out.println("samitha");
+    }
+}
+
+class Anushka extends Name {
+    Anushka() {
+        super();
+        System.out.println("anushka");
+    }
+}
+
+class Amritha extends Anushka {
+    Amritha() {
+        super();
+        System.out.println("amritha");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose an option:");
+        System.out.println("1.");
+        System.out.println("3..");
+        System.out.println("2");
+        int option = scanner.nextInt();
+        scanner.close();
+
+        switch (option) {
+            case 1:
+                Name obj1 = new Name();
+                break;
+            case 2:
+                Anushka obj2 = new Anushka();
+                break;
+            case 3:
+                Amritha obj3 = new Amritha();
+                break;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+    }
+}
+//multi inheritance
+// base class 
+interface Pink {
+  default void  modelOfPink() {
+        System.out.println("This is a modelOfPink");
+    }
+}
+
+// base class 
+interface Blue {
+  default void  modelOfBlue() {
+        System.out.println("This is a modelOfBlue");
+    }
+}
+
+class Colour implements Pink,Blue{
+    Colour(){
+        System.out.println("This is a colour");
+    }
+}
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Colour obj = new Colour();
+        obj.modelOfPink(); 
+        obj.modelOfBlue(); 
+  }
+}
