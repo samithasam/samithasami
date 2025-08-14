@@ -58,6 +58,10 @@ public class Main {
        
     }
 }
+//output
+Enter a name (Arunachalam,Susiladevi,Arunarani,Ashok):
+Ashok
+Family details
 // multi inheritance
 class Vehical {
     void vechical() {
@@ -79,6 +83,10 @@ public class Main {
         Car obj = new Car();
     }
 }
+//output
+this is a FourWheeler
+this is a Car
+
 //heiarchal inheritance
 import java.util.Scanner;
 
@@ -128,6 +136,17 @@ public class Main {
         }
     }
 }
+//output
+Choose an option:
+1.
+3..
+2
+3
+samitha
+anushka
+amritha
+
+
 //multi inheritance
 // base class 
 interface Pink {
@@ -156,3 +175,7 @@ public class Main {
         obj.modelOfBlue(); 
   }
 }
+//output
+This is a colour
+This is a modelOfPink
+This is a modelOfBlue
