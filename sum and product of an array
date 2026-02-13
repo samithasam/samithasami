@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print(" array num: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        int sum = 0;
+        int product = 1;
+
+        System.out.println(" array list:");
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum = sum + arr[i];
+            product = product * arr[i];
+        }
+
+        System.out.println("Sum = " + sum);
+        System.out.println("Product = " + product);
+    }
+}
+Output:
+array num: 4
+  array list:
+4
+3
+4
+58
+Sum = 69
+Product = 2784
