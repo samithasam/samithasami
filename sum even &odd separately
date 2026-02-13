@@ -1,0 +1,36 @@
+    Program:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("number: ");
+        int n = sc.nextInt();
+
+        int evenSum = 0;
+        int oddSum = 0;
+
+        for(int i = 1; i <= n; i++) {
+            int num = sc.nextInt();
+
+            if(num % 2 == 0) {
+                evenSum = evenSum + num;
+            } else {
+                oddSum = oddSum + num;
+            }
+        }
+
+        System.out.println("even = " + evenSum);
+        System.out.println("odd = " + oddSum);
+    }
+}
+Output:
+number: 5
+6
+7
+8
+6
+5
+even = 20
+odd = 12
