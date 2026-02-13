@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int s = sc.nextInt();
+      if(s%4==0 && s%100 !=0)
+      System.out.println("yes");
+      else{
+        System.out.println("no");
+      }
+    }
+}
+OUTPUT:
+
