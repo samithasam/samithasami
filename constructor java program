@@ -1,0 +1,19 @@
+class student{
+    int reg;
+    String name;
+    student(int r,String n) {
+        reg=r;
+        name=n;
+    }
+    void print() {
+        System.out.println(reg+" "+name);
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        student m1=new student(83,"aravind");
+        student m2=new student(64,"sam");
+        m1.print();
+        m2.print();
+    }
+}
