@@ -1,0 +1,21 @@
+class student{
+    int reg;
+    String name;
+    void assign(int r,String n) {
+        reg=r;
+        name=n;
+    }
+    void print() {
+        System.out.println(reg+" "+name);
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        student m1=new student();
+        m1.assign(83,"aravind");
+        student m2=new student();
+        m2.assign(64,"sam");
+        m1.print();
+        m2.print();
+    }
+}
