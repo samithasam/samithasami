@@ -1,0 +1,25 @@
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int d) {
+        data = d;
+        left = null;
+        right = null;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node root = new Node(8);
+        Node left = new Node(7);
+        root.left = left;
+        Node right = new Node(6);
+        root.right = right;
+        root.right.right = new Node(8);
+        System.out.println(root.data+" "+root.left.data+" "+root.right.data+" "+root.right.right.data);
+        
+    }
+}
